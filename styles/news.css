@@ -49,6 +49,55 @@ body {
 .navbar a:hover::before {
   width: 100%;
 }
+.card {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 10px;
+  background: #fff;
+}
+/********** картинка слева **********/
+.left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+/********** картинка справа **********/
+.right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+/********** картинка между текста **********/
+.columns {
+  float: left;
+  max-width: 30%;
+  margin: 0;
+}
+.img-center {
+  float: left;
+  margin: 0 1.5% 0 1.5%;
+  max-width: 37%;
+}
+/********** картинка по центру********* */
+.center {
+  display: block;
+  margin: 0 auto 1.5%;
+}
+.card h1 {
+  margin: 10px 0;
+  font-size: 50px;
+  text-align: center;
+}
+.card p {
+  margin: 0;
+  font-size: 35px;
+}
 .footer {
   flex: 0 0 auto;
   background-color: #f8f9fa;
