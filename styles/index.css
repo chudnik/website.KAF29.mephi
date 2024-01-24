@@ -73,7 +73,7 @@ body {
 }
 .news-section .section-content .title p {
   font-size: 25px;
-  color: #FAB812;
+  color: #fab812;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -161,6 +161,10 @@ body {
 .footer {
   flex: 0 0 auto;
   background-color: #f8f9fa;
-  height: 80px;
-  text-align: center;
+  height: 125px;
+  font-size: 15px;
+  text-align: left;
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-bottom: 10px;
 }
