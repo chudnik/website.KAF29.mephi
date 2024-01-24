@@ -1,100 +1,37 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Comatible" content="IE-edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Comatible" content="IE-edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Преподаватели</title>
-    <link rel="stylesheet" href="/styles/teachers.css" />
-  </head>
-  <body>
-    <header class="header">
-      <a href="index.html" class="logo">KAF29</a>
-      <nav class="navbar">
-        <a href="index.html">Домой</a>
-        <a href="teachers.html">Преподаватели</a>
-        <a href="about.html">О нас</a>
-        <a href="lesson.html">Учебные материалы</a>
-        <a href="#">Контакты</a>
-      </nav>
-    </header>
-    <div class="teachers-section">
-      <div class="teacher-card">
-        <img src="images/teacher1.jpg" alt="Teacher 1" />
-        <h2>Нестерова Екатерина Денисовна</h2>
-        <p>
-          Противоположная точка зрения подразумевает, что сторонники
-          тоталитаризма в науке разоблачены.
-        </p>
-      </div>
-      <div class="teacher-card">
-        <img src="images/teacher2.jpg" alt="Teacher 2" />
-        <h2>Минаева Кира Данииловна</h2>
-        <p>
-          Господа, высокотехнологичная концепция общественного уклада говорит о
-          возможностях прогресса профессионального сообщества.
-        </p>
-      </div>
-      <div class="teacher-card">
-        <img src="images/teacher3.jpg" alt="Teacher 3" />
-        <h2>Громов Никита Константинович</h2>
-        <p>
-          Кстати, базовые сценарии поведения пользователей формируют глобальную
-          экономическую сеть и при этом — разоблачены!
-        </p>
-      </div>
-      <div class="teacher-card">
-        <img src="images/teacher4.jpg" alt="Teacher 3" />
-        <h2>Золотова Елизавета Артемьевна</h2>
-        <p>
-          Прежде всего, реализация намеченных плановых заданий способствует
-          подготовке и реализации стандартных подходов.
-        </p>
-      </div>
-      <div class="teacher-card">
-        <img src="images/teacher5.jpg" alt="Teacher 3" />
-        <h2>Лопатин Василий Андреевич</h2>
-        <p>
-          В целом, конечно, семантический разбор внешних противодействий создаёт
-          предпосылки для прогресса профессионального сообщества.
-        </p>
-      </div>
-      <div class="teacher-card">
-        <img src="images/teacher6.jpg" alt="Teacher 3" />
-        <h2>Бирюков Роберт Сергеевич</h2>
-        <p>
-          Но предприниматели в сети интернет могут быть функционально разнесены
-          на независимые элементы.
-        </p>
-      </div>
-      <div class="teacher-card">
-        <img src="images/teacher7.jpg" alt="Teacher 3" />
-        <h2>Михайлова Ульяна Алиевна</h2>
-        <p>
-          Как принято считать, некоторые особенности внутренней политики,
-          инициированные исключительно синтетически, призваны к ответу.
-        </p>
-      </div>
-      <div class="teacher-card">
-        <img src="images/teacher8.jpg" alt="Teacher 3" />
-        <h2>Осипов Роман Никитич</h2>
-        <p>
-          И нет сомнений, что стремящиеся вытеснить традиционное производство,
-          нанотехнологии, инициированные исключительно синтетически,
-          функционально разнесены на независимые элементы.
-        </p>
-      </div>
-      <div class="teacher-card">
-        <img src="images/teacher9.jpg" alt="Teacher 3" />
-        <h2>Лобанова Регина Артемьевна</h2>
-        <p>
-          Равным образом, граница обучения кадров напрямую зависит от форм
-          воздействия.
-        </p>
-      </div>
-    </div>
-    <div class="footer">
-      <p>This is the footer</p>
-    </div>
-  </body>
+    <link rel="stylesheet" href="{% static 'styles/teachers.css' %}"/>
+</head>
+<body>
+<header class="header">
+    <a href="{% url 'index' %}" class="logo">KAF29</a>
+    <nav class="navbar">
+        <a href="{% url 'index' %}">Домой</a>
+        <a href="{% url 'teachers' %}">Преподаватели</a>
+        <a href="{% url 'lesson' %}">Учебные материалы</a>
+    </nav>
+</header>
+<div class="teachers-section">
+    {% for teacher in teachers %}
+    <tr>
+        <div class="teacher-card">
+            <img scr="{{teacher.photo}}">
+            <h2>{{teacher.first_name}}</h2>
+            <h2>{{teacher.last_name}}</h2>
+            <h2>{{teacher.patronymic}}</h2>
+            <p>{{teacher.description}}</p>
+        </div>
+    </tr>
+    {% endfor %}
+</div>
+<div class="footer">
+    <p>This is the footer</p>
+</div>
+</body>
 </html>

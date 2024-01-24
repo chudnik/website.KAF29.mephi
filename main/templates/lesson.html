@@ -1,75 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Comatible" content="IE-edge" />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Comatible" content="IE-edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <title>Новость</title>
-    <link rel="stylesheet" href="\..\styles\lesson.css" />
-  </head>
-  <body>
-    <header class="header">
-      <a href="index.html" class="logo">KAF29</a>
-      <nav class="navbar">
-        <a href="index.html">Домой</a>
-        <a href="teachers.html">Преподаватели</a>
-        <a href="about.html">О нас</a>
-        <a href="lesson.html">Учебные материалы</a>
-        <a href="#">Контакты</a>
-      </nav>
-    </header>
-    <h1>Программировние</h1>
-    <div class="books">
-      <div class="lesson">
-        <img src="images/book1.jpg" alt="Lesson" />
-        <h2>Урок 1: Введение в HTML</h2>
-        <p>
-          HTML (HyperText Markup Language) - это язык гипертекстовой разметки,
-          который используется для создания веб-страниц.
-        </p>
-        <a href="/files/Kaf29.gif">Скачать файл</a>
-      </div>
-      <div class="lesson">
-        <img src="images/book2.jpg" alt="Lesson" />
-        <h2>Урок 2: Введение в CSS</h2>
-        <p>
-          CSS (Cascading Style Sheets) - это язык, используемый для описания
-          внешнего вида веб-страниц.
-        </p>
-        <a href="/files/Kaf29.gif">Скачать файл</a>
-      </div>
-      <div class="lesson">
-        <img src="images/book3.jpg" alt="Lesson" />
-        <h2>Урок 3: Введение в JavaScript</h2>
-        <p>
-          JavaScript - это язык программирования, который используется для
-          создания интерактивных веб-страниц.
-        </p>
-        <a href="/files/Kaf29.gif">Скачать файл</a>
-      </div>
-      <div class="lesson">
-        <img src="images/book4.jpg" alt="Lesson" />
-        <h2>Урок 4: Введение в Python</h2>
-        <p>
-          Python - это высокоуровневый язык программирования, который
-          используется для создания веб-приложений, анализи данных, машинного
-          обучения и многих других вещей.
-        </p>
-        <a href="/files/Kaf29.gif">Скачать файл</a>
-      </div>
-      <div class="lesson">
-        <img src="images/book5.jpg" alt="Lesson" />
-        <h2>Урок 5: Введение в Java</h2>
-        <p>
-          Java - это высокоуровневый язык программирования, который используется
-          для создания различных приложений, включая мобильные приложения,
-          веб-приложения, десктопные приложения и т.д.
-        </p>
-        <a href="/files/Kaf29.gif">Скачать файл</a>
-      </div>
-    </div>
-    <div class="footer">
-      <p>This is the footer</p>
-    </div>
-  </body>
+    <link rel="stylesheet" href="{% static 'styles/lesson.css' %}"/>
+</head>
+<body>
+<header class="header">
+    <a href="{% url 'index' %}" class="logo">KAF29</a>
+    <nav class="navbar">
+        <a href="{% url 'index' %}">Домой</a>
+        <a href="{% url 'teachers' %}">Преподаватели</a>
+        <a href="{% url 'lesson' %}">Учебные материалы</a>
+    </nav>
+</header>
+<h1>Программировние</h1>
+<div class="books">
+    {% for book in courses %}
+    <tr>
+        <div class="teacher-card">
+            <img src="{% static 'images/1.jpg' %}" alt="Teacher 1"/>
+            <h2>{{book.first_name}}</h2>
+            <p>
+                {{book.description}}
+            </p>
+        </div>
+    </tr>
+    {% endfor %}
+</div>
+<div class="footer">
+    <p>This is the footer</p>
+</div>
+</body>
 </html>

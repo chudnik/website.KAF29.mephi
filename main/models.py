@@ -15,3 +15,4 @@ class Teachers(models.Model):
     patronymic = models.TextField()
     description = models.TextField()
     birthday = models.DateField()
+    photo = models.ImageField(upload_to='img')

@@ -11,13 +11,11 @@
 
   <body>
     <header class="header">
-      <a href="index.html" class="logo">KAF29</a>
+      <a href="{% url 'index' %}" class="logo">KAF29</a>
       <nav class="navbar">
-        <a href="index.html">Домой</a>
-        <a href="teachers.html">Преподаватели</a>
-        <a href="about.html">О нас</a>
-        <a href="lesson.html">Учебные материалы</a>
-        <a href="#">Контакты</a>
+        <a href="{% url 'index' %}">Домой</a>
+        <a href="{% url 'teachers' %}">Преподаватели</a>
+        <a href="{% url 'lesson' %}">Учебные материалы</a>
       </nav>
     </header>
     <div class="news-section">
