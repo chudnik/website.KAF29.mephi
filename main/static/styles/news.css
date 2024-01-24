@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: bold;
+}
+body {
+  min-height: 100vh;
+  background: linear-gradient(to right, #0055bb, #00bbee);
+  background-size: cover;
+  background-position: center;
+}
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 50px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+.navbar a {
+  position: relative;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 40px;
+}
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: 0.3s;
+}
+.navbar a:hover::before {
+  width: 100%;
+}
+.card {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 10px;
+  background: #fff;
+}
+/********** картинка слева **********/
+.left {
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+/********** картинка справа **********/
+.right {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+
+/********** картинка между текста **********/
+.columns {
+  float: left;
+  max-width: 30%;
+  margin: 0;
+}
+.img-center {
+  float: left;
+  margin: 0 1.5% 0 1.5%;
+  max-width: 37%;
+}
+/********** картинка по центру********* */
+.center {
+  display: block;
+  margin: 0 auto 1.5%;
+}
+.card h1 {
+  margin: 10px 0;
+  font-size: 50px;
+  text-align: center;
+}
+.card p {
+  margin: 0;
+  font-size: 35px;
+}
+.footer {
+  flex: 0 0 auto;
+  background-color: #f8f9fa;
+  height: 80px;
+  text-align: center;
+}
