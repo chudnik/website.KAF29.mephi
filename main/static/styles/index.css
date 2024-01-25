@@ -160,19 +160,24 @@ body {
 }
 .about {
   background-color: #f7f7f7;
-  position: relative;
+  font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid #0055bb;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 20px;
-  margin: 0 0 1.5em;
-  width: 100%;
   box-sizing: border-box;
+  margin-right: 8%;
+  margin-left: 8%;
+  margin-bottom: 30px;
+  padding: 20px;
 }
+
 .footer {
   flex: 0 0 auto;
   background-color: #f8f9fa;
-  height: 80px;
+  font-size: 15px;
+  height: 150px;
   text-align: center;
+  padding: 10px;
+  padding-top: 30px;
 }

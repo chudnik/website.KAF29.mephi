@@ -74,12 +74,15 @@ h1 {
   background: #fff;
 }
 .lesson img {
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
+}
 .footer {
   flex: 0 0 auto;
   background-color: #f8f9fa;
-  height: 80px;
+  font-size: 15px;
+  height: 150px;
   text-align: center;
+  padding: 10px;
+  padding-top: 30px;
 }

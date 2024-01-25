@@ -61,19 +61,19 @@ body {
   margin-bottom: 10px;
   background: #fff;
 }
-/********** картинка слева **********/
+/********** РєР°СЂС‚РёРЅРєР° СЃР»РµРІР° **********/
 .left {
   float: left;
   margin: 0 1em 1em 0;
 }
 
-/********** картинка справа **********/
+/********** РєР°СЂС‚РёРЅРєР° СЃРїСЂР°РІР° **********/
 .right {
   float: right;
   margin: 0 0 1em 1em;
 }
 
-/********** картинка между текста **********/
+/********** РєР°СЂС‚РёРЅРєР° РјРµР¶РґСѓ С‚РµРєСЃС‚Р° **********/
 .columns {
   float: left;
   max-width: 30%;
@@ -84,7 +84,7 @@ body {
   margin: 0 1.5% 0 1.5%;
   max-width: 37%;
 }
-/********** картинка по центру********* */
+/********** РєР°СЂС‚РёРЅРєР° РїРѕ С†РµРЅС‚СЂСѓ********* */
 .center {
   display: block;
   margin: 0 auto 1.5%;
@@ -101,6 +101,9 @@ body {
 .footer {
   flex: 0 0 auto;
   background-color: #f8f9fa;
-  height: 80px;
+  font-size: 15px;
+  height: 150px;
   text-align: center;
+  padding: 10px;
+  padding-top: 30px;
 }
