@@ -8,6 +8,7 @@ class News(models.Model):
     name = models.TextField()
     text = models.TextField()
     date = models.DateTimeField()
+    photo = models.ImageField(upload_to='img')
 
 class Teachers(models.Model):
     first_name = models.TextField()
