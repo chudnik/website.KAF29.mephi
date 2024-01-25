@@ -21,11 +21,13 @@
     {% for teacher in teachers %}
     <tr>
         <div class="teacher-card">
-            <img scr="{{teacher.photo}}">
+            <img src="{{teacher.photo}}" alt="Teacher 1"/>
             <h2>{{teacher.first_name}}</h2>
             <h2>{{teacher.last_name}}</h2>
             <h2>{{teacher.patronymic}}</h2>
-            <p>{{teacher.description}}</p>
+            <p>
+                {{teacher.description}}
+            </p>
         </div>
     </tr>
     {% endfor %}

@@ -73,7 +73,7 @@ body {
 }
 .news-section .section-content .title p {
   font-size: 25px;
-  color: #FAB812;
+  color: #fab812;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -157,6 +157,18 @@ body {
   .news-section .section-content .cards {
     column-count: 4;
   }
+}
+.about {
+  background-color: #f7f7f7;
+  position: relative;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #0055bb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  margin: 0 0 1.5em;
+  width: 100%;
+  box-sizing: border-box;
 }
 .footer {
   flex: 0 0 auto;
