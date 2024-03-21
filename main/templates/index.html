@@ -2,11 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Comatible" content="IE-edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Главная страница</title>
     <meta name="description" content="Главная страница сайта 29 кафедры">
     <meta name="author" content="CHUDNIK">
     <link rel="stylesheet" href="{% static 'styles/index.css' %}"/>
+    <script src="/scripts/itc-slider.js" defer></script>
 </head>
 
 <body>
@@ -15,14 +17,14 @@
         <p>KAF29</p>
     </div>
     <div class="navbar">
-        <a href="">Новости</a>
-        <a href="">Преподаватели</a>
-        <a href="">Библиотека</a>
-        <a href="">О кафедре</a>
+        <a href="#teachers">Преподаватели</a>
+        <a href="#library">Библиотека</a>
+        <a href="#information">О кафедре</a>
+        <a href="#feedback">Обратная связь</a>
     </div>
 </div>
 <h1 class="section">Новости</h1>
-<div class="news">
+<div class="news" id="news">
     <div class="card">
         <h2>Большой заголовок 1</h2>
         <img src="/media/img/img.png" alt="image1">
@@ -39,13 +41,31 @@
         <p>Примерный текст новости бла бла бла бла текст побольше</p>
     </div>
 </div>
-<div class="teachers"></div>
+<h1 class="section" id="teachers">Преподаватели</h1>
+<div class="teachers">
+    {% for teacher in teachers %}
+    <tr>
+        <div class="card">
+            <img src="media/{{teacher.photo}}" alt="Teacher 1"/>
+            <h2>{{teacher.first_name}}</h2>
+            <h2>{{teacher.last_name}}</h2>
+            <h2>{{teacher.patronymic}}</h2>
+            <p>
+                {{teacher.description}}
+            </p>
+        </div>
+    </tr>
+    {% endfor %}
+</div>
+<h1 class="section" id="library">Библиотека</h1>
 <div class="library"></div>
+<h1 class="section" id="information">О кафедре</h1>
 <div class="information"></div>
 <div class="publications"></div>
 <div class="graduates "></div>
 <div class="partners"></div>
 <div class="study"></div>
+<h1 class="section" id="feedback">Обратная связь</h1>
 <div class="feedback"></div>
 </body>
 </html>

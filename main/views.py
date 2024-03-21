@@ -6,7 +6,7 @@ from main.models import Courses, Teachers, News
 
 
 def index_page(request):
-    context = {'news': News.objects.all()}
+    context = {'news': News.objects.all(), 'teachers': Teachers.objects.all()}
     return render(request, 'index.html', context)
 
 

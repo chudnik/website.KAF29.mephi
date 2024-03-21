@@ -10,10 +10,10 @@ class Courses(models.Model):
 
 
 class News(models.Model):
-    name = models.TextField()
+    name = models.TextField(max_length=20, unique=True)
     text = models.TextField()
     date = models.DateTimeField()
-
+    photo = models.ImageField(upload_to='img')
     def __str__(self):
         return f"{self.name}"
 
